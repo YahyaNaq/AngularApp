@@ -7,8 +7,6 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true
         }
       },
       "root": "",
@@ -97,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "56542668-2329-4339-bb1d-8e63afa73f14"
   }
 }
