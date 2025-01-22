@@ -1,3 +1,8 @@
-@for (todo of todos; track $index) {
-    {{ todo }}
-}
+<div class="search">
+    <input type="text" placeholder="Search todos" [(ngModel)]="searchValue">
+</div>
+<div class="todos">
+    @for (todo of todos() | filterTodos : searchValue(); track todo.id) {
+        <app-todo-item [todo]="todo" (todoToggled)="toggleTodos(todo.id)" />
+    }
+</div>

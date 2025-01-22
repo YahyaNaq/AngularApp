@@ -1,0 +1,7 @@
+<div class="todo">
+    <input type="checkbox" [checked]="todo().completed" class="checkbox" (click)="toggleTodo()">
+    <div appHighlightCompletedTodo [isCompleted]="todo().completed">
+        <span>({{todo().id}}) </span>
+        <span>{{todo().title}}</span>
+    </div>
+</div>

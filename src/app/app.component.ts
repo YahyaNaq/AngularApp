@@ -18,6 +18,7 @@ import { TodosComponent } from './todos/todos.component';
     `
       main {
         padding-inline: 20px;
+        padding-block: 10px;
       }
     `
   ],
