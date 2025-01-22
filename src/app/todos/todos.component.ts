@@ -19,7 +19,6 @@ export class TodosComponent implements OnInit {
   searchValue = signal('');
 
   ngOnInit(): void {
-
     this.todoService.getTodos()
     .pipe(
       catchError((err) => {
@@ -32,7 +31,7 @@ export class TodosComponent implements OnInit {
     });
   }
 
-  toggleTodos(todoId: number) {
+  toggleTodo(todoId: number) {
     this.todos.update((todos) => {
       return todos.map((todo) => {
         if (todo.id === todoId) {
@@ -45,5 +44,21 @@ export class TodosComponent implements OnInit {
         return todo;
       });
     });
+  }
+
+  deleteTodo(todoId: number) {
+    const index = this.todos().findIndex(todo => todo.id === todoId);
+
+    if (index !== -1) {
+      this.todos().splice(index, 1);
+    }
+  }
+
+  updateTodo(todoId: number) {
+    const index = this.todos().findIndex(todo => todo.id === todoId);
+
+    if (index !== -1) {
+      this.todos()[index].title = "Yes";
+    }
   }
 }

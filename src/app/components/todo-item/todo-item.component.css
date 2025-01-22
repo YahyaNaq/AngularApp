@@ -2,10 +2,41 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 span {
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.btn {
+    margin-left: 3px;
+    padding-inline: 10px;
+    padding-block: 8px;
+    font-weight: bold;
+    border-width: 0px;
+    border-radius: 4px;
+}
+
+
+.delBtn {
+    background-color: rgb(175, 0, 0);
+    color: white;
+}
+
+.editBtn {
+    background-color: rgb(0, 89, 141);
+    color: white;
+}
+
+.updateBtn {
+    background-color: rgb(0, 136, 7);
+    color: white;
 }

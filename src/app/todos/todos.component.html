@@ -3,6 +3,13 @@
 </div>
 <div class="todos">
     @for (todo of todos() | filterTodos : searchValue(); track todo.id) {
-        <app-todo-item [todo]="todo" (todoToggled)="toggleTodos(todo.id)" />
+        <app-todo-item
+            [todo]="todo"
+            (todoToggled)="toggleTodo(todo.id)"
+            (todoUpdated)="updateTodo(todo.id)"
+            (todoDeleted)="deleteTodo(todo.id)"
+            />
+    } @empty {
+        <span>No todos found</span>
     }
 </div>
