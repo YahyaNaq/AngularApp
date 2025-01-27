@@ -1,18 +1,11 @@
 <div class="todo">
     <input type="checkbox" [checked]="todo().completed" class="checkbox" (click)="toggleTodo()">
-    <div appHighlightCompletedTodo [isCompleted]="todo().completed">
-        @if (isEditing()) {
-            <input type="text" [defaultValue]="todo().title" [(ngModel)]="todoEditTitle">
-        } @else {
-            <span>({{todo().id}}) </span>
-            <span>{{todo().title}}</span>
-        }
+    <div appHighlightCompletedTodo [isCompleted]="todo().completed" class="todo-text">
+        <span>({{todo().id}}) </span>
+        <span>{{todo().title}}</span>
     </div>
-    @if (isEditing()) {
-        <button class="btn editBtn" (click)="updateTodo()">Update</button>
-        <button class="btn" (click)="toggleEditField()">Cancel</button>
-    } @else {
-        <button class="btn editBtn" (click)="toggleEditField()">Edit</button>
+    <div>
+        <button class="btn editBtn" (click)="handleEditClick()">Edit</button>
         <button class="btn delBtn" (click)="deleteTodo()">Delete</button>
-    }
+    </div>
 </div>

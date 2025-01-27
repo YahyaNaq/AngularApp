@@ -7,3 +7,8 @@ header {
     padding-inline: 20px;
     padding-block: 1px;
 }
+
+span {
+    font-size: large;
+    font-weight: bolder;
+}

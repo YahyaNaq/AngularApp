@@ -6,6 +6,7 @@
         <app-todo-item
             [todo]="todo"
             (todoToggled)="toggleTodo(todo.id)"
+            (todoEditClicked)="openEditDialog(todo)"
             (todoUpdated)="updateTodo(todo.id)"
             (todoDeleted)="deleteTodo(todo.id)"
             />

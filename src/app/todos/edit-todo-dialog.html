@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Update Todo</h1>
+<div mat-dialog-content>
+  <app-edit-todo-form [todo]="data" />
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.title" cdkFocusInitial>Update</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

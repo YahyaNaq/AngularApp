@@ -1,4 +1,4 @@
-import { Component, input, output, signal } from '@angular/core';
+import { Component, input, OnInit, output, signal } from '@angular/core';
 import { Todo } from '../../model/todo.type';
 import { HighlightCompletedTodoDirective } from '../../directive/highlight-completed-todo.directive';
 import { FormsModule } from '@angular/forms';
@@ -13,21 +13,20 @@ export class TodoItemComponent {
 
   todo = input.required<Todo>();
   todoToggled = output<void>();
+  todoEditClicked = output<void>();
   todoUpdated = output<void>();
   todoDeleted = output<void>();
-  isEditing = signal(false);
-  todoEditTitle = signal("");
 
   toggleTodo() {
     this.todoToggled.emit();
   }
 
-  toggleEditField() {
-    this.isEditing.update((val) => !val);
+  handleEditClick() {
+    this.todoEditClicked.emit();
   }
 
   updateTodo() {
-    this.toggleEditField();
+    this.handleEditClick();
     this.todoUpdated.emit();
   }
 

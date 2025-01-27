@@ -1,19 +1,24 @@
 .todo {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
+    background-color: aliceblue;
+    padding-block: 8px;
+    padding-inline: 20px;
+    border: .5px solid blue;
+    border-radius: 5px;
+    max-width: fit-content;
     margin-bottom: 18px;
+}
+
+.todo-text {
+    min-width: 500px;
+    max-width: 500px;
 }
 
 span {
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-}
-
-input {
-    padding: 8px;
-    border-radius: 5px;
-    border-width: 1px;
 }
 
 .btn {
@@ -34,9 +39,5 @@ input {
 .editBtn {
     background-color: rgb(0, 89, 141);
     color: white;
-}
-
-.updateBtn {
-    background-color: rgb(0, 136, 7);
-    color: white;
+    margin-right: 10px;
 }
